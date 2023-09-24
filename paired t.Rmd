@@ -1,0 +1,28 @@
+---
+title: "Untitled"
+output: html_document
+date: "2023-09-25"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+```{r}
+setwd ("D:/envy_regret")
+Dataset <- read.csv("total19.csv")
+
+summary(Dataset)
+attach(Dataset)
+
+rl_他人决策价值主观评定-rg_他人决策价值主观评定
+# 3.2.2 他人决策价值主观评定得分的配对样本t检验
+t.test(rg_他人决策价值主观评定,rl_他人决策价值主观评定,paired=T)
+
+# 3.2.3 后悔情绪主观评定得分的配对样本t检验
+t.test(rg_后悔情绪主观评定变化,rl_后悔情绪主观评定变化,paired=T)
+
+```
+
